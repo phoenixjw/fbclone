@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import { BellIcon, ChatBubbleLeftEllipsisIcon, ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 
 import HeaderIcon from "../Headericon";
 
@@ -15,7 +15,7 @@ function Header() {
                  <div className="flex ml-2 items-center rounded-full bg-gray-100 p-2">
                     <MagnifyingGlassIcon className="w-6 h-6 text-gray-600"/>
                     <input 
-                    className="flex ml-2 items-center bg-transparent outline-none placeholder-gray-500 flex-shrink" 
+                    className=" hidden md:inline-flex ml-2 items-center bg-transparent outline-none placeholder-gray-500 flex-shrink" 
                     type="text" 
                     placeholder="Search Facebook" 
                     />
@@ -35,9 +35,15 @@ function Header() {
                 </div>
 
             </div>
+
             {/* Header right */}
-            <div>
+            <div className="flex items-center sm:space-x-2 justify-end">
                 {/* profile pic */}
+            <p className="whitespace-nowrap font-semibold pr-3">Phoenix W</p>
+            <BellIcon className="icon"/>
+            <ChatBubbleLeftEllipsisIcon className="icon"/>
+            <ChevronDownIcon className="icon"/>
+            <BellIcon className="icon"/>
             </div>
         </div>
     )
