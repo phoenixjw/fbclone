@@ -53,7 +53,7 @@ function Header() {
 
 
 
-            <p className="whitespace-nowrap font-semibold pr-3">Phoenix W</p>
+            <p className="whitespace-nowrap font-semibold pr-3">{session.user.name}</p>
             <BellIcon className="icon"/>
             <ChatBubbleLeftEllipsisIcon className="icon"/>
             <ChevronDownIcon className="icon"/>
