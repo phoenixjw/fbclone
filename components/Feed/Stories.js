@@ -1,3 +1,5 @@
+import StoryCard from "./StoryCard";
+
 const stories = [
     {
         name:"Elon Musk",
@@ -7,7 +9,7 @@ const stories = [
     {
         name: "Jeff Bezoz",
         src: "https://links.papareact.com/k2j",
-        profile: "https://links.papareact.com/f0p",
+        profile: "/Jeff.jpg",
     },
     {
         name: "Mark ZuckerBerg",
@@ -22,12 +24,12 @@ const stories = [
 ];
 
 function Stories(){
-    return <div className="flex justify-center space-x-3 mx-3">
+    return <div className="flex justify-center space-x-3 mx-auto">
         {stories.map(story => (
-        <StoryCard name={story.name} src={story.src} profile={story.profile}/>
+        <StoryCard key={story.src} name={story.name} src={story.src} profile={story.profile}/>
         ))}
 
     </div>;
 }
 
-export default Stories
+export default Stories;
