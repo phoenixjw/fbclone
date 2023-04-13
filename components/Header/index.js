@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { BellIcon, ChatBubbleLeftEllipsisIcon, ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import { BellIcon, ChatBubbleLeftEllipsisIcon, ChevronDownIcon, MagnifyingGlassIcon, FlagIcon, PlayIcon, ShoppingCartIcon } from '@heroicons/react/24/outline';
+import {HomeIcon, UserGroupIcon} from '@heroicons/react/24/solid'
 import { useSession } from "next-auth/react";
 import HeaderIcon from "../Headericon";
 import { signOut } from "next-auth/react";
@@ -29,11 +30,11 @@ function Header() {
             {/* Header center */}
             <div className="flex justify-center flex-grow">
                 <div className="flex space-x-6 md:space-x-2">
-                    <HeaderIcon active={true} imgURL="/home-icon.svg"/>
-                    <HeaderIcon imgURL="/flag-icon.svg"/>
-                    <HeaderIcon imgURL="/play-icon.svg"/>
-                    <HeaderIcon imgURL="/shopping-cart-icon.svg"/>
-                    <HeaderIcon imgURL="/group-icon.svg"/>
+                    <HeaderIcon active={true} Icon={HomeIcon}/>
+                    <HeaderIcon Icon={FlagIcon}/>
+                    <HeaderIcon Icon={PlayIcon}/>
+                    <HeaderIcon Icon={ShoppingCartIcon}/>
+                    <HeaderIcon Icon={UserGroupIcon}/>
                 
 
                 </div>

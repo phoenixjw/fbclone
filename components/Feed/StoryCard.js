@@ -12,7 +12,7 @@ function StoryCard ({ name, src, profile}) {
             style={{
                 objectFit: 'cover',
               }}
-            fixed
+            fixed ="true"
             placeholder={name}
             />
             <Image

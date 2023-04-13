@@ -4,6 +4,10 @@ import Head from 'next/head'
 import Login from '@/components/Login';
 import Sidebar from '@/components/Sidebar';
 import Feed from '@/components/Feed';
+import Widgets from '@/components/Widgets';
+import { db } from '@/firebase';
+import { orderBy, collection, us } from 'firebase/firestore';
+import { useCollection } from "react-firebase-hooks/firestore"
 
 
 
@@ -20,7 +24,7 @@ export default function Home({ session }) {
       <main className='flex'>
         <Sidebar/>
         <Feed/>
-        {/* widgets */}
+        <Widgets/>
       </main>
       
     </div>
@@ -33,9 +37,13 @@ export async function getServerSideProps(context) {
   //get the user
   const session = await getSession(context);
 
+ 
+    
+   
   return {
     props: {
-      session
+      session,
+
     }
   }
 }
