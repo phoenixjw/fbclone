@@ -8,7 +8,8 @@ function SideBarRow({src, Icon, title}) {
                 src={src}
                 width={30}
                 height={30}
-                style={{objectFit:"fixed"}}  
+                fixed= "true"
+                alt="Error"
             />
             )}
             {Icon && (

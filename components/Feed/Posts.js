@@ -5,12 +5,12 @@ import Post from "./Post";
 function Posts() {
     const [snapshot, loading, error] = useCollection(collection(db, 'posts'),orderBy('timestamp', 'desc')
         );
-        onSnapshot(collection(db, 'posts'), (snap)=> {
-                    snap.forEach(post => {
-                        console.log(post.data().message);
+        // onSnapshot(collection(db, 'posts'), (snap)=> {
+        //             snap.forEach(post => {
+        //                 console.log(post.data().message);
     
-                    })
-                })
+        //             })
+        //         })
 
     return(
         <div>
